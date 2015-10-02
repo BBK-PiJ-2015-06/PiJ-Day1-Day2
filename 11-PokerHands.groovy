@@ -8,6 +8,12 @@ int rank3 = 0
 int rank4 = 0
 int rank5 = 0
 int count = 1
+
+// following code reads rank and suite of each card from user. 
+// rank of each card stored in ascending order using varaibles rank1, rank2, rank3, rank4 & rank5.
+// running tally kept of suites using numClubs, numHearts, numDiamonds & numSpades.
+// boolean wrongInput used to ensure rank and suite input is correct.
+
 boolean wrongInput = false
 while (count<=5 && !wrongInput) {
 	print "Please type the rank for card " + count + " (lower case): "
@@ -70,6 +76,10 @@ while (count<=5 && !wrongInput) {
 		count = count + 1
 	}
 }
+
+// booleans used below to test whether StraightFlush, Flush, Poker...etc has been acheived,
+// based on previously stored information about the order of ranks and number of each suite. 
+
 if (count > 5) {
 	boolean StraightFlush = false
 	boolean Flush = false
