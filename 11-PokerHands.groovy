@@ -28,11 +28,19 @@ while (count<=5 && !wrongInput) {
 	} else if (s == "king") {
 		i = 13					
 	} else {
-		if (s.length() > 2) {
-			i = 14
-		} else {
+		char c1 = s.substring(0,1)
+		if (c1 == '1' && s.length() >= 2) {
+			char c2 = s.substring(1,2)
+			if (c2 == '0') {
+				i = Integer.parseInt(s)
+			} else {
+				i = 14 
+			}
+		} else if (c1 == '2' || c1 == '3' || c1 == '4' || c1 == '5' || c1 == '6' || c1 == '7' || c1 == '8' || c1 == '9') {
 			i = Integer.parseInt(s)
-		}
+		} else {
+			i = 14
+		}  
 	}
 	if (i < 1 || i > 13) {
 		println "This is not a valid rank."
