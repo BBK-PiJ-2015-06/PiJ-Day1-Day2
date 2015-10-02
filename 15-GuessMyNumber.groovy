@@ -1,4 +1,4 @@
-println "Try to guess my number!"
+println "Try to guess my number! (between 0 and 1000)"
 int numberToGuess = Math.abs(1000 * Math.random())
 print "Tell me a number: "
 String s = System.console().readLine()
